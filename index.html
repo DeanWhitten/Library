@@ -7,7 +7,35 @@
     <title>Library</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Library</h1>
+        <div id="addBook_btnContainer">
+            <button id="addBook_btn">+</button>
+        </div>
+    </header>
+    <div id="bookContainer">
+
+    </div>
+
+    <div id="addBookMsg">
+        <div>
+        <h3>Add New Book</h3>
+        <button id ="exit_btn">X</button>
+        </div>
+        Title:
+            <input id="title" type="text">
+        Author:
+            <input id="author" type="text">
+        Number of Pages:
+            <input id="pages"type="text">
+        Reading Status:
+            <select name="status" id="readStatus">
+                <option value="inProgress">In Progress</option>
+                <option value="notRead">Not Read Yet</option>
+                <option value="read">Read</option>
+            </select>
+            <button>Add Book</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
