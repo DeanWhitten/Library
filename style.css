@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow:hidden;
 }
 
 header{
@@ -20,6 +21,7 @@ header{
 
 /*Message box to add book*/
 #addBookMsg{
+    overflow:hidden;
     background-color: gray;
     padding: 50px;
     width: 50vw;
@@ -27,6 +29,9 @@ header{
     flex-direction: column;
     position: relative;
     left: 25vw;
+    opacity: 0;
+    position: absolute;
+    margin-left: 100%;
 }
 
 #addBookMsg, div{
