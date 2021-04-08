@@ -6,23 +6,29 @@
 }
 
 header{
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     display: flex;
     width: 100vw;
     justify-content: center;
 }
 
-#addBook_btn{
+#addBook_menu{
+    border-style: none;
     margin-left: 25px;
-    padding: 10px;
+    padding:1.5vmax;
+    outline: none;
+  
+    border-radius: 3px;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow:  3px 3px 6px #ededed,
+                 -3px -3px 6px #ffffff;
 }
 
 
 /*Message box to add book*/
 #addBookMsg{
     overflow:hidden;
-    background-color: gray;
     padding: 50px;
     width: 50vw;
     display: flex;
@@ -32,6 +38,12 @@ header{
     opacity: 0;
     position: absolute;
     margin-left: 100%;
+
+
+    border-radius: 12px;
+    background: linear-gradient(145deg, #9a98aa, #82808f);
+    box-shadow:  10px 10px 20px #757381,
+                 -10px -10px 20px #aba9bd;
 }
 
 #addBookMsg, div{
@@ -58,20 +70,18 @@ h3{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 25px;
-    border-radius: 5px;
     border: none;
 }
 #addBookMsg, select{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 25px;
-    border-radius: 5px;
+
 }
 
-#addBookMsg, button{
+#addBook_Btn{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 30px;
-    border-radius: 5px;
     border: none;
 }
