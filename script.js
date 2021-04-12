@@ -37,12 +37,50 @@ function addBookToLibrary(){
      var inputTitle, inputAuthor, inputpages, inputReadStatus;
 
 
-     inputTitle = document.getElementById("title").value;
-     inputAuthor = document.getElementById("author").value;
-     inputpages = document.getElementById("pages").value;
-     inputReadStatus = document.getElementById("readStatus").value;
+     book.title = document.getElementById("title").value;
+     book.author = document.getElementById("author").value;
+     book.pages = document.getElementById("pages").value;
+     book.readStatus = document.getElementById("readStatus").value;
+     book.id = library.length + 1;
+     let i = book.id - 1;
 
-     console.log( inputTitle, inputAuthor, inputpages, inputReadStatus);
+
+     library.push([book.title, book.author, book.pages, book.readStatus, book.id] );
+
+   
+         //create the div elements for the book
+        let object = document.createElement("div");
+
+
+        const newTitle = document.createElement("h2");
+        const newAuthor = document.createElement("h3");
+        const newPages = document.createElement("p");
+        const newStatus = document.createElement("button");
+
+        const insertTitle = document.createTextNode (library[i][0]);
+        const insertAuthor = document.createTextNode (library[i][1]);
+        const insertPages = document.createTextNode (library[i][2]);
+        const insertStatus = document.createTextNode (library[i][3]);
+
+        object.setAttribute('id','bookObject');
+        newTitle.setAttribute('id', 'BO_Title');
+        newAuthor.setAttribute('id', 'BO_Author');
+        newPages.setAttribute('id', 'BO_Pages');
+        newStatus.setAttribute('id', 'BO_Status');
+
+        newTitle.appendChild(insertTitle);
+        newAuthor.appendChild(insertAuthor);
+        newPages.appendChild(insertPages);
+        newStatus.appendChild(insertStatus);
+        
+        object.appendChild(newTitle);
+        object.appendChild(newAuthor);
+        object.appendChild(newPages);
+        object.appendChild(newStatus);
+
+        const bookContainer = document.getElementById("bookContainer");
+
+        bookContainer.appendChild(object);
 
      inputTitle = document.getElementById("title").value ="";
      inputAuthor = document.getElementById("author").value ="";

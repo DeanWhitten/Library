@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    overflow:hidden;
+    
 }
 
 header{
@@ -12,6 +12,21 @@ header{
     width: 100vw;
     justify-content: center;
 }
+#bookContainer{
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+#bookObject{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 30px;
+
+}
+
 
 #addBook_menu{
     border-style: none;
@@ -29,17 +44,17 @@ header{
 /*Message box to add book*/
 #addBookMsg{
     overflow:hidden;
+    top: 20vh;
     padding: 50px;
     width: 50vw;
     display: flex;
     flex-direction: column;
-    position: relative;
     left: 25vw;
     opacity: 0;
-    position: absolute;
     margin-left: 100%;
-
-
+    overflow:hidden;
+    position: fixed;
+    z-index: 1000;
     border-radius: 12px;
     background: linear-gradient(145deg, #9a98aa, #82808f);
     box-shadow:  10px 10px 20px #757381,
