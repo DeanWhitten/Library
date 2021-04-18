@@ -56,27 +56,32 @@ function addBookToLibrary(){
         const newAuthor = document.createElement("h3");
         const newPages = document.createElement("p");
         const newStatus = document.createElement("button");
+        const newDelete = document.createElement("button");
 
         const insertTitle = document.createTextNode (library[i][0]);
         const insertAuthor = document.createTextNode (library[i][1]);
         const insertPages = document.createTextNode (library[i][2]);
         const insertStatus = document.createTextNode (library[i][3]);
+        const insertDelete = document.createTextNode("DELETE");
 
-        object.setAttribute('id','bookObject');
+        object.setAttribute('id', i, 'value', i);
         newTitle.setAttribute('id', 'BO_Title');
         newAuthor.setAttribute('id', 'BO_Author');
         newPages.setAttribute('id', 'BO_Pages');
         newStatus.setAttribute('id', 'BO_Status');
+        newDelete.setAttribute('id', 'BO_Delete')
 
         newTitle.appendChild(insertTitle);
         newAuthor.appendChild(insertAuthor);
         newPages.appendChild(insertPages);
         newStatus.appendChild(insertStatus);
+        newDelete.appendChild(insertDelete);
         
         object.appendChild(newTitle);
         object.appendChild(newAuthor);
         object.appendChild(newPages);
         object.appendChild(newStatus);
+        object.appendChild(newDelete);
 
         const bookContainer = document.getElementById("bookContainer");
 
@@ -89,7 +94,12 @@ function addBookToLibrary(){
 
 }
 
+if(library.length != null){
+
+let bookObjectDelete = document.getElementById('BD_Delete');
+
+bookObjectDelete.addEventListener('click', function(event){
+    console.log(event.target.parentNode.id);
 
 
-
-
+}
